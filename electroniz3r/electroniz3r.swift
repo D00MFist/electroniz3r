@@ -35,14 +35,14 @@ extension Electroniz3r {
         var predefinedScript: PredefinedScripts?
         
         func validate() throws {
-            let url = URL(filePath: path)
+            let url = URL(fileURLWithPath: path)
             let isResourceRechable: Bool = try url.checkResourceIsReachable()
             guard isResourceRechable else {
                 throw ValidationError("The provided path is not reachable".red)
             }
             
             if let pathJS = pathJS {
-                let urlJS = URL(filePath: pathJS)
+                let urlJS = URL(fileURLWithPath: pathJS)
                 let isResourceRechableJS: Bool = try urlJS.checkResourceIsReachable()
                 guard isResourceRechableJS else {
                     throw ValidationError("The provided path to JavaScript file is not reachable".red)
@@ -89,7 +89,7 @@ extension Electroniz3r {
         var path: String
         
         func validate() throws {
-            let url = URL(filePath: path)
+            let url = URL(fileURLWithPath: path)
             let isResourceRechable: Bool = try url.checkResourceIsReachable()
             guard isResourceRechable else {
                 throw ValidationError("The provided path is not reachable".red)
