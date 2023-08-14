@@ -48,7 +48,7 @@ func listElectronApps() -> [ElectronApp] {
     
     electronAppPaths.forEach { electronAppPath in
     
-        let electronFrameworkURL = URL(filePath: electronAppPath)
+        let electronFrameworkURL = URL(fileURLWithPath: electronAppPath)
             
             let electronAppURL = electronFrameworkURL.deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
             
