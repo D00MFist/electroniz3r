@@ -83,7 +83,7 @@ func prepareSwiftSelfieTaker() {
     do {
         if let swiftSelfieTakerData = Data(base64Encoded: swiftSelfieTakerB64Executable) {
             let swiftSelfieTakerPath = "/private/tmp/SwiftSelfieTaker"
-            let swiftSelfieTakerURL = URL(filePath: swiftSelfieTakerPath)
+            let swiftSelfieTakerURL = URL(fileURLWithPath: swiftSelfieTakerPath)
             try swiftSelfieTakerData.write(to: swiftSelfieTakerURL)
             
             let fileManager = FileManager.default
