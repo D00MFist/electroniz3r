@@ -9,7 +9,7 @@ import Foundation
 import AppKit
 
 func launchApplicationWithInspectArgument(path: String) {
-    let url = URL(filePath: path)
+    let url = URL(fileURLWithPath: path)
     let openConfiguration = NSWorkspace.OpenConfiguration()
     openConfiguration.arguments = ["--inspect=\(ELECTRON_DEBUG_PORT)"]
     
